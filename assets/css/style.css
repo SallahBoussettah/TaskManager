@@ -1,0 +1,170 @@
+/* Styles généraux */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Styles pour les cartes de projet */
+.projet-card {
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.projet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour le tableau Kanban */
+.kanban-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    gap: 20px;
+    min-height: 500px;
+}
+
+.kanban-column {
+    min-width: 300px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanban-column-header {
+    padding: 10px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.kanban-column-body {
+    min-height: 400px;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+/* Styles pour les colonnes avec scrollbar */
+.kanban-column-body.scrollable {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.kanban-column-body.scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.kanban-column-body.scrollable::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.kanban-column-body.scrollable::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.kanban-column-body.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Styles pour les colonnes Kanban */
+.column-a-faire {
+    background-color: #f8f9fa;
+}
+
+.column-en-cours {
+    background-color: #e9f2ff;
+}
+
+.column-termine {
+    background-color: #e9ffe9;
+}
+
+/* Styles pour les tâches */
+.tache-item {
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+    transition: all 0.2s ease;
+}
+
+.tache-item:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tache-item:active {
+    cursor: grabbing;
+}
+
+.tache-titre {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tache-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tache-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+/* Styles pour les formulaires */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les boutons d'action */
+.btn-action {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Styles pour Dragula */
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: 0.8;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.gu-hide {
+    display: none !important;
+}
+
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+.gu-transit {
+    opacity: 0.2;
+} 
